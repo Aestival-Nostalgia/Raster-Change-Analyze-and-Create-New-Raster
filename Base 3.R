@@ -1,5 +1,7 @@
 ## ----load-libraries----------------------------------------------------
 # load raster package
+# 本代码会产生巨量的垃圾文件，约有150-200G
+
 library(sp)
 library(raster)
 
