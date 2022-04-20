@@ -2,6 +2,7 @@ library(sp)
 library(raster)
 
 # change the tempdir() location
+# 嘉晚饭，赢！
 tempdir <- function() "G:/Rtemp"
 unlockBinding("tempdir", baseenv())
 utils::assignInNamespace("tempdir", tempdir, ns="base", envir=baseenv())
