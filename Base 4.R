@@ -16,13 +16,14 @@ system.time({
  r2 <- raster("G:/Bachelor_Degree_Thesis/DATA/LUCC_30m_WHU/Extracted/CLCD_v01_2019_clip.tif", band = 1)
  
  # check that spatial extent is the same
- extent(r1) == extent(r2)
+ # extent(r1) == extent(r2)
  
  # create r3 from r1，从r1创建新的栅格
  r3 <- raster(r1)
  r4 <- raster(r1)
  r5 <- raster(r1)
  
+ #判定层
  # r3[r1 == 1 & r2 == 1] <- 1
  # r3[r1 == 1 & r2 == 2] <- 1
  # r3[r1 == 1 & r2 == 3] <- 1
