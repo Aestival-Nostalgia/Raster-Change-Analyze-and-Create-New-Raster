@@ -20,6 +20,7 @@ system.time({
  # create r3 from r1，从r1创建新的栅格
  r3 <- raster(r1)
  r4 <- raster(r1)
+ r5 <- raster(r1)
  
  # r3[r1 == 1 & r2 == 1] <- 1
  # r3[r1 == 1 & r2 == 2] <- 1
@@ -111,10 +112,12 @@ system.time({
  r3[r1 == 9 & r2 == 8] <- 0
  # r3[r1 == 9 & r2 == 9] <- 1
  
- r4 <- r3
- NAvalue(r4) <- 1
- 
- plot(r4) #绘制
+ #请搞清楚此处的逻辑！不使用R3的原因是，空值处无法被条件检索
+ r4 <- r1
+ r4[r3 == 0] <- 0
+ r5[r4 != 0] <- 1
+
+ plot(r5) #绘制
  
  writeRaster(r3,"G:/Bachelor_Degree_Thesis/DATA/LC_Change/1985-2019.tif") #导出
  
