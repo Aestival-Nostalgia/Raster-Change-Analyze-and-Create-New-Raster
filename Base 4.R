@@ -119,10 +119,12 @@ system.time({
  #另外，for循环+并行运算方案也宣告失败。
  r4 <- r1
  r4[r3 == 0] <- 0
+ 
+ r5[r4 == 0] <- 0
  r5[r4 != 0] <- 1
-
+ 
  plot(r5) #绘制
  
- writeRaster(r3,"G:/Bachelor_Degree_Thesis/DATA/LC_Change/1985-2019.tif") #导出
+ writeRaster(r5,"G:/Bachelor_Degree_Thesis/DATA/LC_Change/1985-2019.tif") #导出
  
 })
