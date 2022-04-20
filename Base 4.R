@@ -1,6 +1,13 @@
 library(sp)
 library(raster)
 
+# change the tempdir() location
+tempdir <- function() "/data/Rtmp"
+unlockBinding("tempdir", baseenv())
+utils::assignInNamespace("tempdir", tempdir, ns="base", envir=baseenv())
+assign("tempdir", tempdir, baseenv())
+lockBinding("tempdir", baseenv())
+
 system.time({
  
  # 载入栅格
