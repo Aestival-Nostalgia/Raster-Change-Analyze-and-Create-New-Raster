@@ -112,7 +112,7 @@ system.time({
  # r3[r1 == 9 & r2 == 9] <- 1
  
  r4 <- r3
- r4[r3 != 0] <- 1
+ NAvalue(r4) <- 1
  
  plot(r4) #绘制
  
