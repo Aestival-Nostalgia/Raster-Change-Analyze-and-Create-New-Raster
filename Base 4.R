@@ -8,6 +8,7 @@ utils::assignInNamespace("tempdir", tempdir, ns="base", envir=baseenv())
 assign("tempdir", tempdir, baseenv())
 lockBinding("tempdir", baseenv())
 
+#system.time为计时函数
 system.time({
  
  # 载入栅格
