@@ -1,5 +1,7 @@
 library(sp)
 library(raster)
+#跑一次的时间在一个半小时左右
+#衍生文件50G左右
 
 # change the tempdir() location
 tempdir <- function() "G:/Rtemp"
