@@ -1,5 +1,6 @@
 library(sp)
 library(raster)
+# 实际上本质是根据两个栅格的条件对第三个栅格进行赋值操作。
 
 # change the tempdir() location
 tempdir <- function() "G:/Rtemp"
